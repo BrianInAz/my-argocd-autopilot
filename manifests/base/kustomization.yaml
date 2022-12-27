@@ -19,3 +19,12 @@ patches:
       - op: replace
         path: /subjects/0/namespace
         value: default
+  # Add Type of LoadBalancer to argocd-server Service, so that argo-cd be accessible by MetalLB
+  - target:
+      version: v1
+      kind: Service
+      name: argocd-server
+    patch: |-
+      - op: add
+        path: /spec/type
+        value: LoadBalancer
