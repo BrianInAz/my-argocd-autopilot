@@ -30,4 +30,4 @@ patches:
         value: LoadBalancer
       - op: add
         path: /spec/loadBalancerIP
-        value: 192.168.30.119
+        value: 192.168.30.110
