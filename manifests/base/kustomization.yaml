@@ -28,12 +28,6 @@ patches:
       - op: add
         path: /spec/type
         value: LoadBalancer
-  # Add LoadBalancerIP to specify IP for argocd-server Service
-  - target:
-      version: v1
-      kind: Service
-      name: argocd-server
-    patch: |-
       - op: add
         path: /spec/loadBalancerIP
         value: 192.168.30.119
