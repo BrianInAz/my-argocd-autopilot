@@ -35,5 +35,5 @@ patches:
       name: argocd-server
     patch: |-
       - op: add
-        path: /spec/LoadBalancerIP
+        path: /spec/loadBalancerIP
         value: 192.168.30.119
